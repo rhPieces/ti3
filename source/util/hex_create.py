@@ -1,3 +1,4 @@
+import os
 from pymongo.connection import Connection
 from pymongo.son_manipulator import AutoReference, NamespaceInjector
 
@@ -6,48 +7,83 @@ db = con.ti3
 db.add_son_manipulator(NamespaceInjector())
 db.add_son_manipulator(AutoReference(db))
 
+sets = {
+    'v' : 'Vanilla',
+    'se': 'Shattered Empire',
+    'sa': 'Shattered Ascension',
+}
+
+types = {
+    'e': 'Empty',
+    'p': 'Planet',
+    'h': 'Homeworld',
+    's': 'Special',
+    'm': 'Mecatol Rex',
+    'w': 'Wormwhole Nexus',
+}
+
+specialties = {
+    'r': 'Red',
+    'g': 'Green',
+    'b': 'Blue',
+    'y': 'Yellow',
+    'g': 'Ground Force',
+    's': 'Shock Troop',
+    'f': 'Fighter',
+    't': 'Trade Good',
+}
+
+entities = {
+    'a': 'A',
+    'b': 'B',
+    'c': 'C',
+    'n': 'Nebula',
+    'af': 'Asteroid Field',
+    'i': 'Ion Storm',
+    's': 'Supernova',
+}
+
 def add_hex():
     new_hex = {}
+    new_hex['set'] = get_from_dict('Set', sets)
+    new_hex['type'] = get_from_dict('Type', types)
+    new_hex['entities'] = get_entities()
+    #db.hexes.save(new_hex)
+    print(new_hex)
 
-    se = raw_input('Shattered Empire? ')
-    if se == 'y':
-        new_hex['shattered_empires'] = 1
+def add_planet():
+    planet = {}
+    planet['name'] = raw_input('Planet Name: ')
+    planet['res'] = raw_input('Resource Value: ')
+    planet['inf'] = raw_input('Influence Value: ')
+    planet['specialty'] = get_from_dict('Specialty', specialties)
 
-    hw = raw_input('Home World? ')
-    if hw == 'y':
-        new_hex['home_world'] = 1
+    #db.planets.save(planet)
+    return planet
 
-    wh = raw_input('Worm Holes: ').split(' ')
-    if len(wh) > 0:
-        new_hex['worm_holes'] = wh
+def get_entities():
+    to_add = []
+    while raw_input('Add Entity? y/N ') == 'y':
+        if (raw_input('Planet? y/N ') == 'y'):
+            to_add.append(add_planet())
+        else:
+            to_add.append(get_from_dict('Entity', entities))
 
-    planets = add_planets()
-    new_hex['planets'] = planets
+    return to_add
 
-    db.hexes.save(new_hex)
+def get_from_dict(name, ops):
+    os.system(['clear','cls'][os.name == 'nt'])
+    for l in ['{0:>4} {1:<30}'.format(k, ops[k]) for k in ops]:
+        print(l)
+    val = raw_input(name + ': ')
+    while val and val not in ops:
+        val = raw_input(name + ': ')
 
-def add_planets():
-    planets = []
-    name = raw_input('Planet Name: ')
-    while name != '':
-        res = raw_input('Resource Value: ')
-        inf = raw_input('Influence Value: ')
-        specialty = raw_input('Specialy: ')
-        planet = {
-            'name': name,
-            'influence': inf,
-            'resources': res
-        }
-        if specialty != '':
-            planet['specialty'] = specialty
-
-        db.planets.save(planet)
-        planets.append(planet)
-
-        name = raw_input('Planet Name: ')
-
-    return planets
+    if val:
+        return ops[val]
+    return None
 
 if __name__ == '__main__':
     while raw_input('Continue? ') == 'y':
+        os.system(['clear','cls'][os.name == 'nt'])
         add_hex()

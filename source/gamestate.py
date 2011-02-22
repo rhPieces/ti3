@@ -8,5 +8,7 @@ class GameState:
         self.players = None
         self.board = None
         self.objective_deck = None
+        self.action_deck = None
+        self.political_deck = None
         self.point_limit = 0
         self.strategies = None
