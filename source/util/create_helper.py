@@ -14,13 +14,20 @@ sets = {
     'sa': 'Shattered Ascension',
 }
 
-types = {
+hex_types = {
     'e': 'Empty',
     'p': 'Planet',
     'h': 'Homeworld',
     's': 'Special',
     'm': 'Mecatol Rex',
     'w': 'Wormwhole Nexus',
+}
+
+entity_types = {
+    'p': 'Planet',
+    'w': 'Wormhole',
+    'a': 'Anomaly',
+    't': 'Trade Station',
 }
 
 specialties = {
@@ -47,16 +54,14 @@ entities = {
 def add_hex():
     new_hex = {}
     new_hex['set'] = get_from_dict('Set', sets)
-    new_hex['type'] = get_from_dict('Type', types)
+    new_hex['type'] = get_from_dict('Type', hex_types)
+    if new_hex['type'] == 'Homeworld':
+        new_hex['race'] = raw_input('Race: ')
     new_hex['entities'] = get_entities()
 
     pprint(new_hex)
     if raw_input('Save? y/N ') == 'y':
         db.hexes.save(new_hex)
-    else:
-        for ent in new_hex['entities']:
-            if '_id' in ent:
-                db.planets.remove(ent)
 
 def add_planet():
     planet = {}
@@ -70,17 +75,18 @@ def add_planet():
     planet['specialty'] = get_from_dict('Specialty', specialties)
 
     pprint(planet)
-    if raw_input('Save? y/N ') == 'y':
-        db.planets.save(planet)
     return planet
 
 def get_entities():
     to_add = []
     while raw_input('Add Entity? Y/n ') != 'n':
-        if raw_input('Planet? Y/n ') != 'n':
-            to_add.append(add_planet())
+        new_entity = {}
+        new_entity['type'] = get_from_dict('Type', entity_types)
+        if new_entity['type'] in ('Planet', 'Trade Station'):
+            new_entity.update(add_planet())
         else:
-            to_add.append(get_from_dict('Entity', entities))
+            new_entity['name'] = get_from_dict('Entity', entities)
+        to_add.append(new_entity)
 
     return to_add
 
