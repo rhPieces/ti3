@@ -16,28 +16,30 @@ except ImportError, e:
 
 def main():
     pygame.init()
+    clk = pygame.time.Clock()
 
-    screen = pygame.display.set_mode((640, 480))
+    screen = pygame.display.set_mode((1440, 900), FULLSCREEN)
     pygame.display.set_caption('Twilight Imperium')
 
-    img = pygame.image.load('data/images/tiles/sardakk_norr.png')
-    img = img.convert_alpha()
-    img_rect = img.get_rect()
-    img = pygame.transform.scale(img, (img_rect.width/3, img_rect.height/3))
-    img_rect = img.get_rect()
 
     background = pygame.Surface(screen.get_size())
     background = background.convert()
     background.fill((250, 250, 250))
 
-    font = pygame.font.Font(None, 36)
-    text = font.render("Welcome to Twilight Imperium", 1, (10, 10, 10))
-    textpos = text.get_rect()
-    textpos.centerx = background.get_rect().centerx
-    img_rect.centerx = background.get_rect().centerx
-    img_rect.centery = background.get_rect().centery + 50
-    background.blit(text, textpos)
-    background.blit(img, img_rect)
+    hex = get_hex()
+    rect = hex.get_rect()
+    initialx = 100
+    initialy = 100
+    xinc = 150
+    yinc = 175
+    for row in range(0, 4):
+        for col in range (0, 9):
+            offset = 0
+            if col % 2:
+                offset = 87
+            rect.centerx = initialx + (col * xinc)
+            rect.centery = initialy + (row * yinc) + offset
+            background.blit(hex, rect)
 
     screen.blit(background, (0, 0))
     pygame.display.flip()
@@ -47,8 +49,18 @@ def main():
             if evt.type == QUIT:
                 return
 
+        clk.tick(60)
         screen.blit(background, (0, 0))
         pygame.display.flip()
+
+def get_hex():
+    hex = pygame.Surface((200, 175))
+    hex.set_colorkey((0, 250, 0))
+    hex.convert()
+    hex.fill((0, 250, 0))
+    pygame.draw.polygon(hex, (0, 0, 250), ((49, 0), (149, 0), (199, 87), (149, 174), (49, 174), (0, 87)), 2)
+
+    return hex
 
 if __name__ == '__main__':
     main()

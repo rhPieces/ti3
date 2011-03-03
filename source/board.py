@@ -23,11 +23,11 @@ class Board:
 
     def adjacent_coords(self, row, col):
         return {
-            'n': (row - 2, col) if row >= 2 else None,
-            'ne': (row - 1, col) if row >= 1 and col <= self.max_cols - 1 else None,
-            'se': (row + 1, col) if row <= self.max_rows and col <= self.max_cols - 1 else None,
-            's': (row + 2, col) if row <= self.max_rows - 2 else None,
-            'sw': (row + 1, col - 1) if row <= self.max_rows - 1 and col >= 1 else None,
+            'n': (row - 1, col) if row >= 1 else None,
+            'ne': (row - 1, col + 1) if row >= 1 and col <= self.max_cols - 1 else None,
+            'se': (row, col + 1) if  col <= self.max_cols - 1 else None,
+            's': (row + 1, col) if row <= self.max_rows - 1 else None,
+            'sw': (row, col - 1) if  col >= 1 else None,
             'nw': (row - 1, col - 1) if row >= 1 and col >= 1 else None,
         }
 
