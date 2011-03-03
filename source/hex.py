@@ -18,4 +18,6 @@ class Hex:
         self.type = hex['type']
         self.set = hex['set']
         self.entities = hex['entities']
+        self.planets = [entity for entity in self.entities if entity['type'] == 'Planet']
+        self.ships = []
 
