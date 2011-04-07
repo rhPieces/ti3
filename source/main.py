@@ -12,8 +12,9 @@ try:
     import pygame
     from pygame.locals import *
     import board as bm
-    import gui.board as gbm
     import hex as hm
+    import gui.board as gbm
+    import gui.infopanel as ipm
     import config
 except ImportError, e:
     print("Could not load module. {0}".format(e))
@@ -33,13 +34,6 @@ def setup_board():
     b.set_hex(phexes[3], *b.adjacent_coords(*b.center)['s'])
     b.set_hex(phexes[4], *b.adjacent_coords(*b.center)['sw'])
     b.set_hex(phexes[5], *b.adjacent_coords(*b.center)['nw'])
-    for row in b.grid:
-        for hex in row:
-            if hex is not None:
-                print(hex.type, sep = ' ', end = ' ')
-            else:
-                print('None', sep = ' ', end = ' ')
-        print()
     return b
 
 def main():
@@ -55,15 +49,23 @@ def main():
     background = background.convert()
     background.fill((0, 0, 0))
 
-    gb = gbm.gBoard((900,900))
+    gb = gbm.gBoard((round(config.width * .8), config.height))
     gb.set_board(b)
     gb.draw()
-
     gbpos = gb.get_rect()
-    gbpos.centerx = screen.get_rect().centerx
-    gbpos.centery = screen.get_rect().centery
+    gbpos.top = 0
+    gbpos.left = round(config.width * .2)
+
+    ip = ipm.gInfoPanel((round(config.width * .2), config.height))
+    ip.write('Hello World\nThis is a test')
+    ip.draw()
+    ippos = ip.get_rect()
+    ip.top = 0
+    ip.left = 0
+
 
     background.blit(gb, gbpos)
+    background.blit(ip, ippos)
     screen.blit(background, (0, 0))
     pygame.display.flip()
 

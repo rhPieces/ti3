@@ -8,9 +8,12 @@ from hex import gHex
 
 class gBoard(pygame.Surface):
 
+    def __init__(self, size):
+        pygame.Surface.__init__(self, size)
+        self.grid = []
+
     def set_board(self, board):
         self.board = board
-        self.grid = []
         for row in range(0, len(board.grid)):
             for col in range(0, len(board.grid[0])):
                 if col == 0:

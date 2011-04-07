@@ -6,7 +6,10 @@ import pygame
 from pygame.locals import *
 
 class gHex(pygame.Surface):
-    hex = None
+
+    def __init__(self, size):
+        pygame.Surface.__init__(self, size)
+        self.hex = None
 
     def set_hex(self, hex):
         self.hex = hex
