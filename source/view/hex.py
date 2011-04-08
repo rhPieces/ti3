@@ -5,7 +5,7 @@ Functions and classes for drawing a hex
 import pygame
 from pygame.locals import *
 
-class gHex(pygame.Surface):
+class Hex(pygame.Surface):
 
     def __init__(self, size):
         pygame.Surface.__init__(self, size)

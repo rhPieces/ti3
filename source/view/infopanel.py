@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 
-class gInfoPanel(pygame.Surface):
+class InfoPanel(pygame.Surface):
     PTSIZE = 18 
     BACKGROUND = (0, 0, 0)
     COLOR = (250, 250, 250)

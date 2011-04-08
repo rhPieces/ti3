@@ -11,10 +11,10 @@ try:
     import sys
     import pygame
     from pygame.locals import *
-    import board as bm
-    import hex as hm
-    import gui.board as gbm
-    import gui.infopanel as ipm
+    import model.board as bm
+    import model.hex as hm
+    import view.board as bv
+    import view.infopanel as ipv
     import config
 except ImportError, e:
     print("Could not load module. {0}".format(e))
@@ -25,16 +25,16 @@ def setup_board():
     shexes = hm.load(type = 'Special')
     mc = hm.load(entities = {'$elemMatch': {'name' : 'Mecatol Rex'}})[0]
 
-    b = bm.Board(3, 3)
-    b.set_hex(mc, *b.center)
+    board = bm.Board(3, 3)
+    board.set_hex(mc, *board.center)
 
-    b.set_hex(phexes[0], *b.adjacent_coords(*b.center)['n'])
-    b.set_hex(phexes[1], *b.adjacent_coords(*b.center)['ne'])
-    b.set_hex(shexes[0], *b.adjacent_coords(*b.center)['se'])
-    b.set_hex(phexes[3], *b.adjacent_coords(*b.center)['s'])
-    b.set_hex(phexes[4], *b.adjacent_coords(*b.center)['sw'])
-    b.set_hex(phexes[5], *b.adjacent_coords(*b.center)['nw'])
-    return b
+    board.set_hex(phexes[0], *board.adjacent_coords(*board.center)['n'])
+    board.set_hex(phexes[1], *board.adjacent_coords(*board.center)['ne'])
+    board.set_hex(shexes[0], *board.adjacent_coords(*board.center)['se'])
+    board.set_hex(phexes[3], *board.adjacent_coords(*board.center)['s'])
+    board.set_hex(phexes[4], *board.adjacent_coords(*board.center)['sw'])
+    board.set_hex(phexes[5], *board.adjacent_coords(*board.center)['nw'])
+    return board
 
 def main():
     pygame.init()
@@ -43,20 +43,20 @@ def main():
     screen = pygame.display.set_mode((config.width, config.height))
     pygame.display.set_caption('Twilight Imperium')
 
-    b = setup_board()
+    board = setup_board()
 
     background = pygame.Surface(screen.get_size())
     background = background.convert()
     background.fill((0, 0, 0))
 
-    gb = gbm.gBoard((round(config.width * .8), config.height))
-    gb.set_board(b)
+    gb = bv.Board((round(config.width * .8), config.height))
+    gb.set_board(board)
     gb.draw()
     gbpos = gb.get_rect()
     gbpos.top = 0
     gbpos.left = round(config.width * .2)
 
-    ip = ipm.gInfoPanel((round(config.width * .2), config.height))
+    ip = ipv.InfoPanel((round(config.width * .2), config.height))
     ip.write('Hello World\nThis is a test')
     ip.draw()
     ippos = ip.get_rect()

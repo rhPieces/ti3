@@ -4,9 +4,9 @@ Functions and classes for drawing the board
 
 import pygame
 from pygame.locals import *
-from hex import gHex
+from hex import Hex
 
-class gBoard(pygame.Surface):
+class Board(pygame.Surface):
 
     def __init__(self, size):
         pygame.Surface.__init__(self, size)
@@ -18,7 +18,7 @@ class gBoard(pygame.Surface):
             for col in range(0, len(board.grid[0])):
                 if col == 0:
                     self.grid.append([])
-                self.grid[row].append(gHex((200, 175)))
+                self.grid[row].append(Hex((200, 175)))
                 self.grid[row][col].set_hex(self.board.get_hex(row, col))
 
     def draw(self):
