@@ -9,12 +9,14 @@
 from __future__ import print_function
 try:
     import sys
+
     import pygame
     from pygame.locals import *
-    import model.board as bm
-    import model.hex as hm
-    import view.board as bv
-    import view.infopanel as ipv
+
+    import ti3.model.board as bm
+    import ti3.model.hex as hm
+    import ti3.view.board as bv
+    import ti3.view.infopanel as ipv
     import config
 except ImportError as e:
     print("Could not load module. {0}".format(e))
