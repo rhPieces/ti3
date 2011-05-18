@@ -21,19 +21,19 @@ except ImportError, e:
     sys.exit(2)
 
 def setup_board():
-    phexes = hm.load(type = 'Planet')
-    shexes = hm.load(type = 'Special')
-    mc = hm.load(entities = {'$elemMatch': {'name' : 'Mecatol Rex'}})[0]
+    hexes = hm.load()
+    mc = hexes[27]
 
     board = bm.Board(3, 3)
     board.set_hex(mc, *board.center)
+    print(mc.type)
 
-    board.set_hex(phexes[0], *board.adjacent_coords(*board.center)['n'])
-    board.set_hex(phexes[1], *board.adjacent_coords(*board.center)['ne'])
-    board.set_hex(shexes[0], *board.adjacent_coords(*board.center)['se'])
-    board.set_hex(phexes[3], *board.adjacent_coords(*board.center)['s'])
-    board.set_hex(phexes[4], *board.adjacent_coords(*board.center)['sw'])
-    board.set_hex(phexes[5], *board.adjacent_coords(*board.center)['nw'])
+    board.set_hex(hexes[0], *board.adjacent_coords(*board.center)['n'])
+    board.set_hex(hexes[1], *board.adjacent_coords(*board.center)['ne'])
+    board.set_hex(hexes[2], *board.adjacent_coords(*board.center)['se'])
+    board.set_hex(hexes[3], *board.adjacent_coords(*board.center)['s'])
+    board.set_hex(hexes[4], *board.adjacent_coords(*board.center)['sw'])
+    board.set_hex(hexes[5], *board.adjacent_coords(*board.center)['nw'])
     return board
 
 def main():

@@ -1,9 +1,9 @@
 from __future__ import print_function
-import source.board as bm
-import source.hex as hm
+import source.model.board as bm
+import source.model.hex as hm
 
-hexes = hm.load(type = 'Planet')
-mc = hm.load(entities = {'$elemMatch': {'name' : 'Mecatol Rex'}})[0]
+hexes = hm.load()
+mc = hexes[21]
 
 b = bm.Board(11, 11)
 b.set_hex(mc, *b.center)

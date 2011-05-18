@@ -1,20 +1,21 @@
 """
 Functions and Classes dealing with hexes on the board
 """
-from pymongo.connection import Connection
-from pymongo.son_manipulator import AutoReference, NamespaceInjector
+import json
 
 def load(**kwargs):
-    con = Connection()
-    db = con.ti3
-    db.add_son_manipulator(NamespaceInjector())
-    db.add_son_manipulator(AutoReference(db))
+    hex_file = open('data/hexes.dat', 'r')
 
-    return [Hex(hex) for hex in db.hexes.find(kwargs)]
+    hexes = []
+    for line in hex_file:
+        hexes.append(Hex(json.loads(line)))
+
+    return hexes
 
 class Hex:
 
     def __init__(self, hex):
+        self._id = hex['_id']
         self.type = hex['type']
         self.set = hex['set']
         self.entities = hex['entities']

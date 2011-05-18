@@ -1,0 +1,71 @@
+{"entities": [], "_id": 0, "set": "Vanilla", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 1, "set": "Vanilla", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 2, "set": "Shattered Empire", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 3, "set": "Vanilla", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 4, "set": "Vanilla", "_ns": "hexes", "type": "Empty"}
+{"entities": [{"res": 2, "inf": 1, "type": "Planet", "name": "Lesab", "specialty": "Green"}], "_id": 5, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 0, "type": "Planet", "name": "Vefut II", "specialty": "Red"}], "_id": 6, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 2, "type": "Trade Station", "name": "Sumerian", "specialty": "Trade Good"}, {"res": 1, "inf": 1, "type": "Planet", "name": "Arcturus", "specialty": null}], "_id": 7, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 2, "type": "Trade Station", "name": "Tsion", "specialty": "Trade Good"}, {"res": 0, "inf": 1, "type": "Planet", "name": "Bellatrix", "specialty": "Red"}], "_id": 8, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 2, "type": "Planet", "name": "Qucen'n", "specialty": null}, {"res": 0, "inf": 3, "type": "Planet", "name": "Rarron", "specialty": "Green"}], "_id": 9, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 3, "type": "Planet", "name": "Centauri", "specialty": null}, {"res": 1, "inf": 1, "type": "Planet", "name": "Gral", "specialty": "Blue"}], "_id": 10, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 3, "inf": 1, "type": "Planet", "name": "Lodor", "specialty": "Green"}, {"type": "Wormhole", "name": "A"}], "_id": 11, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 2, "type": "Planet", "name": "Coorneeq", "specialty": "Red"}, {"res": 2, "inf": 0, "type": "Planet", "name": "Resculon", "specialty": null}], "_id": 12, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"type": "Wormhole", "name": "B"}], "_id": 13, "set": "Vanilla", "_ns": "hexes", "type": "Special"}
+{"entities": [{"res": 1, "inf": 1, "type": "Planet", "name": "Tar'mann", "specialty": null}], "_id": 14, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 2, "type": "Planet", "name": "Vega Minor", "specialty": "Blue"}, {"res": 2, "inf": 1, "type": "Planet", "name": "Vega Major", "specialty": null}], "_id": 15, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 2, "type": "Planet", "name": "Mirage", "specialty": "Fighter"}], "_id": 16, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 3, "type": "Planet", "name": "Mehar Xull", "specialty": "Blue"}], "_id": 17, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"type": "Wormhole", "name": "A"}], "_id": 18, "set": "Vanilla", "_ns": "hexes", "type": "Special"}
+{"entities": [{"res": 2, "inf": 1, "type": "Planet", "name": "Arnor", "specialty": null}, {"res": 1, "inf": 2, "type": "Planet", "name": "Lor", "specialty": "Red"}], "_id": 19, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 0, "inf": 1, "type": "Planet", "name": "Rigel I", "specialty": "Green"}, {"res": 1, "inf": 2, "type": "Planet", "name": "Rigel II", "specialty": null}, {"res": 1, "inf": 1, "type": "Planet", "name": "Rigel III", "specialty": "Blue"}], "_id": 20, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 1, "type": "Planet", "name": "New Albion", "specialty": "Green"}, {"res": 3, "inf": 1, "type": "Planet", "name": "Starpoint", "specialty": null}], "_id": 21, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 2, "type": "Planet", "name": "Saudor", "specialty": null}], "_id": 22, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 0, "inf": 3, "type": "Planet", "name": "Mallice", "specialty": null}, {"type": "Wormhole", "name": "B"}, {"type": "Wormhole", "name": "A"}], "_id": 23, "set": "Shattered Empire", "_ns": "hexes", "type": "Wormwhole Nexus"}
+{"entities": [{"res": 1, "inf": 6, "type": "Planet", "name": "Mecatol Rex", "specialty": null}], "_id": 24, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 2, "inf": 0, "type": "Planet", "name": "Arretze", "specialty": null}, {"res": 1, "inf": 1, "type": "Planet", "name": "Hercant", "specialty": null}, {"res": 0, "inf": 1, "type": "Planet", "name": "Kamdorn", "specialty": null}], "race": "The Emirates of Hacan", "_id": 25, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 4, "inf": 0, "type": "Planet", "name": "Arc Prime", "specialty": null}, {"res": 2, "inf": 1, "type": "Planet", "name": "Wren Terra", "specialty": null}], "race": "The Barony of Letnev", "_id": 26, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 4, "inf": 1, "type": "Planet", "name": "Moll Primus", "specialty": null}], "race": "The Mentak Coalition", "_id": 27, "type": "Homeworld"}
+{"set": "Shattered Empire", "_ns": "hexes", "entities": [{"res": 1, "inf": 0, "type": "Planet", "name": "Lisis II", "specialty": null}, {"res": 2, "inf": 1, "type": "Planet", "name": "Ragh", "specialty": null}], "race": "The Clan of Saar", "_id": 28, "type": "Homeworld"}
+{"set": "Shattered Empire", "_ns": "hexes", "entities": [{"res": 2, "inf": 4, "type": "Planet", "name": "Darien", "specialty": null}], "race": "The Brotherhood of Yin", "_id": 29, "type": "Homeworld"}
+{"set": "Shattered Empire", "_ns": "hexes", "entities": [{"res": 4, "inf": 1, "type": "Planet", "name": "Muaat", "specialty": null}], "race": "The Embers of Muaat", "_id": 30, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 2, "inf": 3, "type": "Planet", "name": "Nar", "specialty": null}, {"res": 1, "inf": 2, "type": "Planet", "name": "Jol", "specialty": null}], "race": "Universities of Jol-Nar", "_id": 31, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 2, "inf": 3, "type": "Planet", "name": "Archon Ren", "specialty": null}, {"res": 1, "inf": 1, "type": "Planet", "name": "Archon Tau", "specialty": null}], "race": "The Xxcha Kingdom", "_id": 32, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 2, "inf": 3, "type": "Planet", "name": "Retillion", "specialty": null}, {"res": 1, "inf": 2, "type": "Planet", "name": "Shalloq", "specialty": null}], "race": "The Yssaril Tribes", "_id": 33, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 5, "inf": 0, "type": "Planet", "name": "[0.0.0]", "specialty": null}], "race": "The L1z1x Mindnet", "_id": 34, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 0, "inf": 2, "type": "Planet", "name": "Maaluuk", "specialty": null}, {"res": 3, "inf": 1, "type": "Planet", "name": "Druaa", "specialty": null}], "race": "The Naalu Collective", "_id": 35, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 4, "inf": 2, "type": "Planet", "name": "Jord", "specialty": null}], "race": "Federation of Sol", "_id": 36, "type": "Homeworld"}
+{"set": "Shattered Empire", "_ns": "hexes", "entities": [{"res": 3, "inf": 4, "type": "Planet", "name": "Winnu", "specialty": "Yellow"}], "race": "The Winnu", "_id": 37, "type": "Homeworld"}
+{"set": "Vanilla", "_ns": "hexes", "entities": [{"res": 1, "inf": 0, "type": "Planet", "name": "Tren'lak", "specialty": null}, {"res": 3, "inf": 1, "type": "Planet", "name": "Quinarra", "specialty": null}], "race": "Sardakk N'orr", "_id": 38, "type": "Homeworld"}
+{"entities": [{"type": "Anomaly", "name": "Nebula"}], "_id": 39, "set": "Vanilla", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Asteroid Field"}], "_id": 40, "set": "Vanilla", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Asteroid Field"}], "_id": 41, "set": "Shattered Empire", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Asteroid Field"}], "_id": 42, "set": "Vanilla", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Ion Storm"}], "_id": 43, "set": "Shattered Empire", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Supernova"}], "_id": 44, "set": "Vanilla", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Ion Storm"}], "_id": 45, "set": "Shattered Empire", "_ns": "hexes", "type": "Special"}
+{"entities": [{"type": "Anomaly", "name": "Supernova"}], "_id": 46, "set": "Shattered Empire", "_ns": "hexes", "type": "Special"}
+{"entities": [], "_id": 47, "set": "Shattered Empire", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 48, "set": "Shattered Empire", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 49, "set": "Vanilla", "_ns": "hexes", "type": "Empty"}
+{"entities": [], "_id": 50, "set": "Vanilla", "_ns": "hexes", "type": "Empty"}
+{"entities": [{"type": "Anomaly", "name": "Nebula"}], "_id": 51, "set": "Shattered Empire", "_ns": "hexes", "type": "Special"}
+{"entities": [], "_id": 52, "set": "Shattered Empire", "_ns": "hexes", "type": "Empty"}
+{"entities": [{"res": 1, "inf": 2, "type": "Planet", "name": "Wellon", "specialty": null}], "_id": 53, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 1, "type": "Planet", "name": "Primor", "specialty": "Ground Force"}], "_id": 54, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 3, "inf": 1, "type": "Planet", "name": "Bereg", "specialty": "Red"}, {"res": 2, "inf": 3, "type": "Planet", "name": "Lirta IV", "specialty": "Green"}], "_id": 55, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 2, "type": "Planet", "name": "Arinam", "specialty": "Blue"}, {"res": 0, "inf": 4, "type": "Planet", "name": "Meer", "specialty": null}], "_id": 56, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 1, "type": "Planet", "name": "Garbozia", "specialty": "Green"}], "_id": 57, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 1, "type": "Planet", "name": "Thibah", "specialty": null}], "_id": 58, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 3, "inf": 0, "type": "Planet", "name": "Abyz", "specialty": null}, {"res": 2, "inf": 0, "type": "Planet", "name": "Fria", "specialty": "Blue"}], "_id": 59, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 1, "type": "Planet", "name": "Quann", "specialty": "Green"}, {"type": "Wormhole", "name": "B"}], "_id": 60, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 0, "type": "Planet", "name": "Tequ'ran", "specialty": "Red"}, {"res": 0, "inf": 3, "type": "Planet", "name": "Torkan", "specialty": "Blue"}], "_id": 61, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 3, "inf": 0, "type": "Planet", "name": "Capha", "specialty": null}], "_id": 62, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 0, "type": "Planet", "name": "El'nath", "specialty": "Blue"}], "_id": 63, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 0, "inf": 2, "type": "Planet", "name": "Dal Bootha", "specialty": "Red"}, {"res": 1, "inf": 1, "type": "Planet", "name": "Xxehan", "specialty": "Green"}], "_id": 64, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 1, "inf": 0, "type": "Planet", "name": "Lazar", "specialty": null}, {"res": 2, "inf": 1, "type": "Planet", "name": "Sakulag", "specialty": null}], "_id": 65, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 0, "inf": 2, "type": "Planet", "name": "Mellon", "specialty": null}, {"res": 3, "inf": 1, "type": "Planet", "name": "Zohbat", "specialty": "Blue"}], "_id": 66, "set": "Vanilla", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 2, "type": "Planet", "name": "Lisis", "specialty": null}, {"res": 2, "inf": 0, "type": "Planet", "name": "Velnor", "specialty": "Red"}], "_id": 67, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 0, "type": "Planet", "name": "Ashtroth", "specialty": null}, {"res": 1, "inf": 2, "type": "Planet", "name": "Loki", "specialty": null}, {"res": 1, "inf": 0, "type": "Planet", "name": "Abaddon", "specialty": "Red"}], "_id": 68, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 3, "inf": 0, "type": "Planet", "name": "Hope's End", "specialty": "Shock Troop"}], "_id": 69, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
+{"entities": [{"res": 2, "inf": 2, "type": "Planet", "name": "Perimeter", "specialty": null}], "_id": 70, "set": "Shattered Empire", "_ns": "hexes", "type": "Planet"}
