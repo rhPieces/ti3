@@ -16,7 +16,7 @@ try:
     import view.board as bv
     import view.infopanel as ipv
     import config
-except ImportError, e:
+except ImportError as e:
     print("Could not load module. {0}".format(e))
     sys.exit(2)
 
