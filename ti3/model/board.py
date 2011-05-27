@@ -15,19 +15,23 @@ class Board:
         self.grid[row][col] = hex
 
     def get_hex(self, row, col):
+        if row is None or col is None:
+            return None
         return self.grid[row][col]
 
     def adjacent_hexes(self, row, col):
         return dict((dir, self.get_hex(*coord))
-                for dir, coord in self.adjacent_coords(row, col).iteritems())
+                for dir, coord in self.adjacent_coords(row, col).iteritems()
+                    if coord is not None)
 
     def adjacent_coords(self, row, col):
+        none = (None, None)
         return {
-            'n': (row - 1, col) if row >= 1 else None,
-            'ne': (row - 1, col + 1) if row >= 1 and col <= self.max_cols - 1 else None,
-            'se': (row, col + 1) if  col <= self.max_cols - 1 else None,
-            's': (row + 1, col) if row <= self.max_rows - 1 else None,
-            'sw': (row, col - 1) if  col >= 1 else None,
-            'nw': (row - 1, col - 1) if row >= 1 and col >= 1 else None,
+            'n': (row - 1, col) if row >= 1 else none,
+            'ne': (row - 1, col + 1) if row >= 1 and col <= self.max_cols - 1 else none,
+            'se': (row, col + 1) if  col <= self.max_cols - 1 else none,
+            's': (row + 1, col) if row <= self.max_rows - 1 else none,
+            'sw': (row, col - 1) if  col >= 1 else none,
+            'nw': (row - 1, col - 1) if row >= 1 and col >= 1 else none,
         }
 
