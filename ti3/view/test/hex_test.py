@@ -40,5 +40,10 @@ class HexTest(unittest.TestCase):
         self.hex.hex.type = 'Empty'
         self.assertEqual((0, 0, 250), self.hex.get_color());
 
+    def test_get_points(self):
+        self.assertEqual(6, len(self.hex._get_points()))
+        self.assertEqual(((49.0, 0), (148.0, 0), (197, 86.0), (148.0, 172), (49.0, 172), (0, 86.0)),
+                self.hex._get_points())
+
 if __name__ == '__main__':
     unittest.main()

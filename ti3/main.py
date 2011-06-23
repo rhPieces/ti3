@@ -28,7 +28,6 @@ def setup_board():
 
     board = bm.Board(3, 3)
     board.set_hex(mc, *board.center)
-    print(mc.type)
 
     board.set_hex(hexes[0], *board.adjacent_coords(*board.center)['n'])
     board.set_hex(hexes[1], *board.adjacent_coords(*board.center)['ne'])
